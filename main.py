@@ -90,6 +90,7 @@ while game:
         ball_x_speed = -ball_speed
 
     pygame.draw.circle(screen, yellow, ball_rect.center, ball_radius)  # Шарик
+
     score_print = arial_font_48.render('Score: ' + str(score), True, white)  # Печать очков
     if not game_over:
         screen.blit(score_print, [screen_width / 2 - score_print.get_width() / 2, 15])  # Расположение их на экране
@@ -100,6 +101,7 @@ while game:
         screen.blit(retry_surface,
                     [screen_width / 2 - retry_surface.get_width() / 2,
                      screen_height / 3 + score_print.get_height()])
+
     clock.tick(60)  # Замедление блока
     pygame.display.flip()  # Обновление экрана
 
